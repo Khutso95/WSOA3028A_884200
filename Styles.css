@@ -1,0 +1,21 @@
+#back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 18px;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  outline: none;
+  border: 3px solid rgb(90, 89, 89);
+  border-radius: 20%;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  transition-property: background-color, color;
+}
+#back-to-top:hover,
+#back-to-top:focus {
+  background-color: black;
+  color: white;
+}

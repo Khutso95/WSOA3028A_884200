@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Metaphors</title>
+
+    <link rel="stylesheet" href="Styles.css" />
   </head>
 
   <body style="background-color: white;">
@@ -14,8 +16,9 @@
       </h1>
     </nav>
 
-    <input type="button" value="<<" onclick="history.back()" />
-    <input type="button" value=">>" onclick="history.forward()" />
+    <button id="back-button"><<</button>
+    <button id="forward-button">>></button>
+    <button id="back-to-top">Top</button>
 
     <nav>
       <h1>
@@ -38,5 +41,7 @@
         once reputable newspaper, Witwatersrand Post.
       </p>
     </article>
+
+    <script src="Code.js"></script>
   </body>
 </html>
