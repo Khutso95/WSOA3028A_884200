@@ -30,6 +30,7 @@ table {
   font-size: 20px;
   background-color: white;
   color: black;
+  margin-left: 200px;
 }
 p {
   margin-bottom: 30px;
@@ -38,7 +39,7 @@ p {
   line-height: 1.4em;
   text-align: justify;
 }
-h1,
+
 h2,
 h3,
 h4,
@@ -46,9 +47,6 @@ h5,
 h6 {
   margin-left: 200px;
 }
-
-}
 img {
-  /* margin-left: 200px; */
-  margin-right: 200px;
+  margin-left: 200px;
 }
