@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 #back-to-top {
   display: none;
   position: fixed;
@@ -24,6 +28,58 @@ body {
   font-size: 20px;
   background-color: white;
   color: black;
+}
+/* .Container {
+  width: 70%;
+  margin: auto;
+} */
+@media (max-width: 1200px) {
+  .Container {
+    margin-left: 200px;
+    margin-right: 200px;
+  }
+}
+@media (max-width: 1000px) {
+  .Container {
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+}
+@media (max-width: 800px) {
+  .Container {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+}
+@media (max-width: 600px) {
+  .Container {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+@media (max-width: 500px) {
+  .Container {
+    margin-left: 50px;
+    margin-right: 40px;
+  }
+}
+@media (max-width: 400px) {
+  .Container {
+    margin-left: 40px;
+    margin-right: 20px;
+  }
+}
+@media (max-width: 300px) {
+  .Container {
+    margin-left: 30px;
+    margin-right: 0;
+  }
+}
+@media (max-width: 250px) {
+  .Container {
+    margin-left: 25px;
+    margin-right: 0;
+  }
 }
 /* table {
   font-family: Arial, Helvetica, sans-serif;
