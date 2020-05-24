@@ -7,13 +7,15 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
+  width: 50px;
+  height: 50px;
   font-size: 18px;
   background-color: white;
   color: black;
   cursor: pointer;
   outline: none;
   border: 3px solid rgb(90, 89, 89);
-  border-radius: 20%;
+  border-radius: 50%;
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
   transition-property: background-color, color;
@@ -23,16 +25,138 @@
   background-color: black;
   color: white;
 }
+#back-button {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  outline: none;
+  border: 3px solid rgb(90, 89, 89);
+  border-radius: 50%;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  transition-property: background-color, color;
+}
+#back-button:hover,
+#back-button:focus {
+  background-color: black;
+  color: white;
+}
+#forward-button {
+  position: fixed;
+  top: 30px;
+  left: 90px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  outline: none;
+  border: 3px solid rgb(90, 89, 89);
+  border-radius: 50%;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  transition-property: background-color, color;
+}
+#forward-button:hover,
+#forward-button:focus {
+  background-color: black;
+  color: white;
+}
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
   background-color: white;
   color: black;
 }
-/* .Container {
-  width: 70%;
-  margin: auto;
-} */
+.main-container {
+  display: grid;
+  grid-gap: 20px;
+}
+.Navigation ul {
+  display: grid;
+  grid-gap: 20px;
+  padding: 0;
+  list-style: none;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+.Navigation a {
+  background: gray;
+  display: block;
+  text-decoration: none;
+  padding: 0.8rem;
+  text-align: center;
+  color: black;
+  /* text-transform: uppercase; */
+  font-size: 1.1rem;
+  box-shadow: gray;
+}
+.Navigation a:hover {
+  background: black;
+  color: white;
+}
+
+.main-container {
+  display: grid;
+  grid-gap: 20px;
+  background: black;
+  grid-template-areas: "buttons home-button" "navigation main-background" "none container";
+}
+.HomeButton {
+  grid-area: home-button;
+  background: black;
+  display: block;
+}
+.HomeButton a {
+  text-decoration: none;
+  background: black;
+  color: white;
+  padding-left: 30rem;
+  padding-right: 33rem;
+}
+.HomeButton a:hover {
+  background: grey;
+  color: black;
+}
+.HomeButton:hover {
+  background: grey;
+  color: black;
+}
+.buttons {
+  grid-area: buttons;
+}
+.Background {
+  grid-area: main-background;
+  background: url(images/background0.jpg);
+  min-height: 700px;
+  background-size: cover;
+  background-position: center;
+}
+.Navigation {
+  grid-area: navigation;
+  background: black;
+  border: 2px gray solid;
+  padding: 3rem;
+}
+
+.Container {
+  grid-area: container;
+}
+.Container p {
+  color: white;
+}
+@media (max-width: 2000px) {
+  .Container {
+    margin-left: 300px;
+    margin-right: 300px;
+  }
+}
 @media (max-width: 1200px) {
   .Container {
     margin-left: 200px;
