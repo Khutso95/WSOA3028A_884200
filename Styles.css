@@ -25,15 +25,15 @@
   background-color: black;
   color: white;
 }
-#back-button {
+.back-button {
   position: fixed;
-  top: 30px;
-  left: 30px;
+  top: 55px;
+  left: 70px;
   width: 50px;
   height: 50px;
   font-size: 18px;
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
   cursor: pointer;
   outline: none;
   border: 3px solid rgb(90, 89, 89);
@@ -42,20 +42,20 @@
   transition-timing-function: ease-in-out;
   transition-property: background-color, color;
 }
-#back-button:hover,
-#back-button:focus {
-  background-color: black;
-  color: white;
+.back-button:hover,
+.back-button:focus {
+  background-color: white;
+  color: black;
 }
-#forward-button {
+.forward-button {
   position: fixed;
-  top: 30px;
-  left: 90px;
+  top: 55px;
+  left: 130px;
   width: 50px;
   height: 50px;
   font-size: 18px;
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
   cursor: pointer;
   outline: none;
   border: 3px solid rgb(90, 89, 89);
@@ -64,10 +64,10 @@
   transition-timing-function: ease-in-out;
   transition-property: background-color, color;
 }
-#forward-button:hover,
-#forward-button:focus {
-  background-color: black;
-  color: white;
+.forward-button:hover,
+.forward-button:focus {
+  background-color: white;
+  color: black;
 }
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -75,9 +75,14 @@ body {
   background-color: white;
   color: black;
 }
-.main-container {
-  display: grid;
-  grid-gap: 20px;
+.Navigation {
+  grid-area: navigation;
+  background: black;
+  border: 2px gray solid;
+  padding: 3rem;
+  padding-bottom: 9rem;
+  padding-top: 8rem;
+  box-shadow: 1px 1px 2px #a8ccd7, 0 0 25px #a8ccd7, 0 0 5px white;
 }
 .Navigation ul {
   display: grid;
@@ -87,68 +92,97 @@ body {
   grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 .Navigation a {
-  background: gray;
+  background: black;
+  color: white;
   display: block;
   text-decoration: none;
   padding: 0.8rem;
   text-align: center;
-  color: black;
-  /* text-transform: uppercase; */
   font-size: 1.1rem;
-  box-shadow: gray;
+  box-shadow: 1px 1px 2px #a8ccd7, 0 0 25px #a8ccd7, 0 0 5px white;
 }
 .Navigation a:hover {
-  background: black;
-  color: white;
+  background: white;
+  color: black;
 }
 
 .main-container {
   display: grid;
-  grid-gap: 20px;
+  /* grid-gap: 20px; */
   background: black;
-  grid-template-areas: "buttons home-button" "navigation main-background" "none container";
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 0.5fr 4fr;
+  grid-template-areas:
+    "buttons    home"
+    "navigation main";
 }
 .HomeButton {
-  grid-area: home-button;
+  grid-area: home;
   background: black;
   display: block;
 }
 .HomeButton a {
   text-decoration: none;
   background: black;
-  color: white;
-  padding-left: 30rem;
-  padding-right: 33rem;
+  color: #000000;
+  text-shadow: 1px 1px 2px #a8ccd7, 0 0 25px #a8ccd7, 0 0 5px white;
+  text-align: center;
+  font-size: 3.5rem;
+
+  /* padding-left: 30rem;
+  padding-right: 33rem; */
 }
 .HomeButton a:hover {
+  background: black;
+  font-size: 4rem;
+}
+/* .HomeButton:hover {
   background: grey;
   color: black;
-}
-.HomeButton:hover {
-  background: grey;
-  color: black;
-}
+} */
 .buttons {
   grid-area: buttons;
 }
 .Background {
-  grid-area: main-background;
-  background: url(images/background0.jpg);
-  min-height: 700px;
+  grid-area: main;
+  background: url(images/background4.jpg);
+  /* min-height: 700px; */
+  position: relative;
   background-size: cover;
   background-position: center;
+  box-shadow: 1px 1px 2px #a8ccd7, 0 0 25px #a8ccd7, 0 0 5px white;
 }
-.Navigation {
-  grid-area: navigation;
+.Background .media {
+  padding: 20px;
+  list-style: none;
+  position: absolute;
+  bottom: 90px;
+}
+.Background .contact {
+  padding: 20px;
+  list-style: none;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+.Background a {
   background: black;
-  border: 2px gray solid;
-  padding: 3rem;
+  color: white;
+  /* display: block; */
+  block-size: 1.5rem;
+  text-decoration: none;
+  text-align: center;
+  padding: 0.8rem;
+  font-size: 1.1rem;
+  box-shadow: 1px 1px 2px #a8ccd7, 0 0 25px #a8ccd7, 0 0 5px white;
+}
+.Background a:hover {
+  block-size: 1.8rem;
+  font-size: 1.3rem;
 }
 
-.Container {
-  grid-area: container;
-}
-.Container p {
+.Container p,
+h2 {
   color: white;
 }
 @media (max-width: 2000px) {
@@ -170,9 +204,20 @@ body {
   }
 }
 @media (max-width: 800px) {
-  .Container {
-    margin-left: 100px;
-    margin-right: 100px;
+  .main-container {
+    display: grid;
+    background: black;
+    grid-template-columns: 15% 85%;
+    grid-template-rows: 0.5fr 3fr 5fr;
+    grid-template-areas:
+      "buttons home"
+      "navigation navigation"
+      "main main";
+  }
+  .Navigation {
+    padding: 3rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
   }
 }
 @media (max-width: 600px) {
