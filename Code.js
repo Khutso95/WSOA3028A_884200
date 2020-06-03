@@ -18,11 +18,22 @@ function BackToTopFuction() {
   window.scrollTo(0, 0);
 }
 //History Functions
-backButton.addEventListener("click", BackFunction);
-forwardButton.addEventListener("click", ForwardFuction);
+
 function BackFunction() {
+  backButton.addEventListener("click", BackFunction);
   history.back();
 }
 function ForwardFuction() {
+  forwardButton.addEventListener("click", ForwardFuction);
   history.forward();
+}
+
+//Dropdown menu
+var drop = document.querySelector(".Background .MobileNavigation");
+var nav = document.querySelector(".BurgerNav");
+nav.addEventListener("click", MobileNav);
+function MobileNav() {
+  if (drop.style.display == "grid") {
+    drop.style.display = "none";
+  } else drop.style.display = "grid";
 }

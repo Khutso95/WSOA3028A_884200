@@ -105,7 +105,22 @@ body {
   background: white;
   color: black;
 }
-
+.MobileNavigation {
+  grid-area: main;
+  display: none;
+}
+.Background .MobileNavigation ul {
+  display: grid;
+  grid-gap: 20px;
+  padding: 2rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  list-style: none;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+.Background .MobileNavigation a {
+  display: block;
+}
 .main-container {
   display: grid;
   /* grid-gap: 20px; */
@@ -185,6 +200,24 @@ body {
 h2 {
   color: white;
 }
+.BurgerNav {
+  display: none;
+  grid-area: home;
+  position: relative;
+  top: 15px;
+  position: fixed;
+  right: 1rem;
+}
+.BurgerNav div {
+  width: 25px;
+  height: 4px;
+  background-color: #a8ccd7;
+  margin: 5px;
+}
+.BurgerNav:hover {
+  filter: opacity(50%);
+  user-select: none;
+}
 @media (max-width: 2000px) {
   .Container {
     margin-left: 300px;
@@ -207,14 +240,20 @@ h2 {
   .main-container {
     display: grid;
     background: black;
-    grid-template-columns: 15% 85%;
-    grid-template-rows: 0.5fr 3fr 5fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 5fr 5fr;
     grid-template-areas:
-      "home home"
-      "navigation navigation"
-      "main main";
+      "home"
+      "main"
+      "main";
+    grid-auto-flow: column;
+  }
+  .BurgerNav {
+    display: initial;
   }
   .Navigation {
+    display: none;
+    grid-area: main;
     padding: 3rem;
     padding-bottom: 1rem;
     padding-top: 1rem;
@@ -238,6 +277,17 @@ h2 {
   }
 }
 @media (max-width: 600px) {
+  .main-container {
+    display: grid;
+    background: black;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 5fr 5fr;
+    grid-template-areas:
+      "home"
+      "main"
+      "main";
+    grid-auto-flow: column;
+  }
   .HomeButton a {
     font-size: 2.5rem;
     position: relative;
