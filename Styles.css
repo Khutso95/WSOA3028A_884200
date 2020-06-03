@@ -293,7 +293,7 @@ h2 {
 }
 @media (max-width: 330px) {
   .HomeButton a {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     position: relative;
     top: 12px;
   }
