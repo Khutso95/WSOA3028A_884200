@@ -232,23 +232,63 @@ h2 {
   .HomeButton a {
     font-size: 3rem;
   }
+  .HomeButton a:hover {
+    background: black;
+    font-size: 2.8rem;
+  }
 }
 @media (max-width: 600px) {
-  .Container {
-    margin-left: 50px;
-    margin-right: 50px;
+  .HomeButton a {
+    font-size: 2.5rem;
+    position: relative;
+    top: 8px;
+  }
+  .HomeButton a:hover {
+    background: black;
+    font-size: 2.3rem;
+  }
+  .back-button {
+    position: fixed;
+    top: 8px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
   }
 }
 @media (max-width: 500px) {
-  .Container {
-    margin-left: 50px;
-    margin-right: 40px;
+  .HomeButton a {
+    font-size: 2rem;
+    position: relative;
+    top: 12px;
+  }
+  .HomeButton a:hover {
+    background: black;
+    font-size: 1.8rem;
+  }
+  .back-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 35px;
+    height: 35px;
   }
 }
 @media (max-width: 400px) {
-  .Container {
-    margin-left: 40px;
-    margin-right: 20px;
+  .HomeButton a {
+    font-size: 1.7rem;
+    position: relative;
+    top: 14px;
+  }
+  .HomeButton a:hover {
+    background: black;
+    font-size: 1.8rem;
+  }
+  .back-button {
+    position: fixed;
+    top: 15px;
+    left: 5px;
+    width: 30px;
+    height: 30px;
   }
 }
 @media (max-width: 300px) {
