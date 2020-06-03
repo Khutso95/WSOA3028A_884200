@@ -32,8 +32,13 @@ function ForwardFuction() {
 var drop = document.querySelector(".Background .MobileNavigation");
 var nav = document.querySelector(".BurgerNav");
 nav.addEventListener("click", MobileNav);
+var closing = document.querySelector(".CloseNav");
 function MobileNav() {
   if (drop.style.display == "grid") {
     drop.style.display = "none";
-  } else drop.style.display = "grid";
+    // closing.style.display = "none";
+  } else {
+    drop.style.display = "grid";
+    // closing.style.display = "grid";
+  }
 }

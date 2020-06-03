@@ -218,6 +218,17 @@ h2 {
   filter: opacity(50%);
   user-select: none;
 }
+.CloseNav {
+  display: none;
+  position: relative;
+  top: 7px;
+  position: fixed;
+  right: 1rem;
+  grid-area: home;
+}
+.CloseNav h1 {
+  color: #a8ccd7;
+}
 @media (max-width: 2000px) {
   .Container {
     margin-left: 300px;
@@ -241,7 +252,7 @@ h2 {
     display: grid;
     background: black;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.5fr 5fr 5fr;
+    grid-template-rows: 1fr 5fr 5fr;
     grid-template-areas:
       "home"
       "main"
@@ -291,7 +302,7 @@ h2 {
   .HomeButton a {
     font-size: 2.5rem;
     position: relative;
-    top: 8px;
+    top: 4px;
   }
   .HomeButton a:hover {
     background: black;
@@ -306,14 +317,27 @@ h2 {
   }
 }
 @media (max-width: 500px) {
+  .main-container {
+    display: grid;
+    background: black;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 5fr 5fr;
+    grid-template-areas:
+      "home"
+      "main"
+      "main";
+    grid-auto-flow: column;
+  }
+  .HomeButton ul {
+  }
   .HomeButton a {
-    font-size: 2rem;
+    font-size: 1.5rem;
     position: relative;
-    top: 12px;
+    padding: 0;
   }
   .HomeButton a:hover {
     background: black;
-    font-size: 1.8rem;
+    font-size: 1.3rem;
   }
   .back-button {
     position: fixed;
@@ -322,12 +346,11 @@ h2 {
     width: 35px;
     height: 35px;
   }
-}
+
 @media (max-width: 400px) {
   .HomeButton a {
-    font-size: 1.7rem;
+    font-size: 1.3rem;
     position: relative;
-    top: 14px;
   }
   .HomeButton a:hover {
     background: black;
@@ -345,7 +368,6 @@ h2 {
   .HomeButton a {
     font-size: 1.2rem;
     position: relative;
-    top: 12px;
   }
   .HomeButton a:hover {
     background: black;
