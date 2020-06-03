@@ -210,7 +210,7 @@ h2 {
     grid-template-columns: 15% 85%;
     grid-template-rows: 0.5fr 3fr 5fr;
     grid-template-areas:
-      "buttons home"
+      "home home"
       "navigation navigation"
       "main main";
   }
@@ -218,6 +218,19 @@ h2 {
     padding: 3rem;
     padding-bottom: 1rem;
     padding-top: 1rem;
+  }
+  .forward-button {
+    display: none;
+  }
+  .back-button {
+    position: fixed;
+    top: 5px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+  }
+  .HomeButton a {
+    font-size: 3rem;
   }
 }
 @media (max-width: 600px) {
