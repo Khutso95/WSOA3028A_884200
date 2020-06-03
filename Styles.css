@@ -281,7 +281,7 @@ h2 {
   }
   .HomeButton a:hover {
     background: black;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
   .back-button {
     position: fixed;
@@ -291,10 +291,22 @@ h2 {
     height: 30px;
   }
 }
-@media (max-width: 300px) {
-  .Container {
-    margin-left: 30px;
-    margin-right: 20px;
+@media (max-width: 330px) {
+  .HomeButton a {
+    font-size: 1.4rem;
+    position: relative;
+    top: 12px;
+  }
+  .HomeButton a:hover {
+    background: black;
+    font-size: 1.3rem;
+  }
+  .back-button {
+    position: fixed;
+    top: 15px;
+    left: 5px;
+    width: 30px;
+    height: 30px;
   }
 }
 /* @media (max-width: 250px) {
