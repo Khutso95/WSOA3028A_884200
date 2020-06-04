@@ -25,15 +25,22 @@
   background-color: black;
   color: white;
 }
-.back-button {
+/* .back-button button {
+  background-color: black;
+  color: white;
+  width: 50px;
+  height: 50px;
+  font-size: 25px;
+} */
+.back-button button {
   position: fixed;
   top: 55px;
   left: 70px;
   width: 50px;
   height: 50px;
-  font-size: 18px;
+  font-size: 25px;
   background-color: black;
-  color: white;
+  color: #a8ccd7;
   cursor: pointer;
   outline: none;
   border: 3px solid rgb(90, 89, 89);
@@ -42,20 +49,20 @@
   transition-timing-function: ease-in-out;
   transition-property: background-color, color;
 }
-.back-button:hover,
-.back-button:focus {
+.back-button button:hover,
+.back-button button:focus {
   background-color: white;
   color: black;
 }
-.forward-button {
+.forward-button button {
   position: fixed;
   top: 55px;
   left: 130px;
   width: 50px;
   height: 50px;
-  font-size: 18px;
+  font-size: 25px;
   background-color: black;
-  color: white;
+  color: #a8ccd7;
   cursor: pointer;
   outline: none;
   border: 3px solid rgb(90, 89, 89);
@@ -64,16 +71,18 @@
   transition-timing-function: ease-in-out;
   transition-property: background-color, color;
 }
-.forward-button:hover,
-.forward-button:focus {
+.forward-button button:hover,
+.forward-button button:focus {
   background-color: white;
   color: black;
+}
+html {
+  background-color: black;
 }
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
-  background-color: white;
-  color: black;
+  background-color: black;
 }
 .Navigation {
   grid-area: navigation;
@@ -123,6 +132,7 @@ body {
 }
 .main-container {
   display: grid;
+
   /* grid-gap: 20px; */
   background: black;
   grid-template-columns: 20% 80%;
@@ -135,6 +145,8 @@ body {
   grid-area: home;
   background: black;
   display: block;
+  align-self: center;
+  text-align: center;
 }
 .HomeButton a {
   text-decoration: none;
@@ -161,10 +173,10 @@ body {
 .Background {
   grid-area: main;
   background: url(images/background4.jpg);
-  /* min-height: 700px; */
-  position: relative;
+
   background-size: cover;
   background-position: center;
+  position: relative;
   box-shadow: 1px 1px 2px #a8ccd7, 0 0 25px #a8ccd7, 0 0 5px white;
 }
 .Background .media {
@@ -252,13 +264,14 @@ h2 {
     display: grid;
     background: black;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 5fr 5fr;
+    grid-template-rows: 2fr 25fr auto;
     grid-template-areas:
       "home"
       "main"
       "main";
     grid-auto-flow: column;
   }
+
   .BurgerNav {
     display: initial;
   }
@@ -273,6 +286,7 @@ h2 {
     display: none;
   }
   .back-button {
+    display: none;
     position: fixed;
     top: 5px;
     left: 20px;
@@ -292,12 +306,15 @@ h2 {
     display: grid;
     background: black;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 5fr 5fr;
+    grid-template-rows: 2fr 30fr auto;
     grid-template-areas:
       "home"
       "main"
       "main";
     grid-auto-flow: column;
+  }
+  .Background {
+    box-shadow: unset;
   }
   .HomeButton a {
     font-size: 2.5rem;
@@ -315,23 +332,26 @@ h2 {
     width: 40px;
     height: 40px;
   }
+  .BurgerNav {
+    top: 8px;
+    position: fixed;
+  }
 }
 @media (max-width: 500px) {
   .main-container {
     display: grid;
     background: black;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 5fr 5fr;
+    grid-template-rows: 2fr 40fr auto;
     grid-template-areas:
       "home"
       "main"
       "main";
     grid-auto-flow: column;
   }
-  .HomeButton ul {
-  }
+
   .HomeButton a {
-    font-size: 1.5rem;
+    font-size: 2rem;
     position: relative;
     padding: 0;
   }
@@ -346,10 +366,15 @@ h2 {
     width: 35px;
     height: 35px;
   }
-
+  .BurgerNav {
+    top: 5px;
+    position: fixed;
+    right: 0.1rem;
+  }
+}
 @media (max-width: 400px) {
   .HomeButton a {
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     position: relative;
   }
   .HomeButton a:hover {
@@ -364,9 +389,9 @@ h2 {
     height: 30px;
   }
 }
-@media (max-width: 330px) {
+@media (max-width: 340px) {
   .HomeButton a {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     position: relative;
   }
   .HomeButton a:hover {
