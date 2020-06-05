@@ -15,9 +15,7 @@ function ScrollController() {
 backToTopButton.addEventListener("click", BackToTopFuction);
 
 function BackToTopFuction() {
-  setTimeout(function () {
-    window.scrollTo(0, 0);
-  }, 5);
+  window.scrollTo(0, 0);
 }
 
 //History Functions
