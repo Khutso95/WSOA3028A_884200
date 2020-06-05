@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
 }
-.back-to-top button {
+#to-top {
   display: none;
   position: fixed;
   bottom: 20px;
@@ -10,8 +10,8 @@
   width: 50px;
   height: 50px;
   font-size: 25px;
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
   cursor: pointer;
   outline: none;
   border: 3px solid rgb(90, 89, 89);
@@ -20,10 +20,10 @@
   transition-timing-function: ease-in-out;
   transition-property: background-color, color;
 }
-.back-to-top:hover,
-.back-to-top:focus {
-  background-color: black;
-  color: white;
+#to-top:hover,
+#to-top:focus {
+  background-color: white;
+  color: black;
 }
 
 .back-button button {
@@ -72,13 +72,16 @@
 }
 html {
   background-color: black;
+  height: auto;
 }
 body {
+  height: auto;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
   background-color: black;
 }
 .Navigation {
+  display: none;
   grid-area: navigation;
   background: black;
   border: 2px gray solid;
@@ -132,8 +135,8 @@ body {
   grid-template-columns: 20% 80%;
   grid-template-rows: 0.5fr 4fr;
   grid-template-areas:
-    "buttons    home"
-    "navigation main";
+    "home    home"
+    "main main";
 }
 .HomeButton {
   grid-area: home;
@@ -161,16 +164,26 @@ body {
 .buttons {
   grid-area: buttons;
 }
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+img {
+  color: white;
+}
 .Background {
   grid-area: main;
-  background: url(images/background4.jpg);
+  /* background: url(images/background4.jpg); */
 
   background-size: cover;
   background-position: center;
   position: relative;
   box-shadow: 1px 1px 2px #a8ccd7, 0 0 25px #a8ccd7, 0 0 5px white;
 }
-.Background .media {
+/* .Background .media {
   padding: 20px;
   list-style: none;
   position: absolute;
@@ -182,7 +195,7 @@ body {
   position: absolute;
   bottom: 20px;
   left: 20px;
-}
+} */
 .Background a {
   background: black;
   color: white;
@@ -198,7 +211,27 @@ body {
   block-size: 1.8rem;
   font-size: 1.3rem;
 }
-
+.Background article {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+}
+.Background h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-align: center;
+}
+.Background img {
+  display: block;
+  width: 35%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
 .Container p,
 h2 {
   color: white;
