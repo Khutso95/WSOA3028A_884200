@@ -28,7 +28,7 @@
 
 .back-button button {
   position: fixed;
-  top: 55px;
+  top: 15px;
   left: 70px;
   width: 50px;
   height: 50px;
@@ -50,7 +50,7 @@
 }
 .forward-button button {
   position: fixed;
-  top: 55px;
+  top: 15px;
   left: 130px;
   width: 50px;
   height: 50px;
@@ -132,8 +132,8 @@ body {
 
   /* grid-gap: 20px; */
   background: black;
-  grid-template-columns: 20% 80%;
-  grid-template-rows: 0.5fr 4fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.2fr 4fr;
   grid-template-areas:
     "home    home"
     "main main";
@@ -324,6 +324,12 @@ h2 {
     background: black;
     font-size: 2.8rem;
   }
+  .Background article {
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+  }
 }
 @media (max-width: 600px) {
   .main-container {
@@ -360,6 +366,12 @@ h2 {
     top: 8px;
     position: fixed;
   }
+  .Background article {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+  }
 }
 @media (max-width: 500px) {
   .main-container {
@@ -395,6 +407,12 @@ h2 {
     position: fixed;
     right: 0.1rem;
   }
+  .Background article {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+  }
 }
 @media (max-width: 400px) {
   .HomeButton a {
@@ -412,6 +430,12 @@ h2 {
     width: 30px;
     height: 30px;
   }
+  .Background article {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+  }
 }
 @media (max-width: 340px) {
   .HomeButton a {
@@ -428,6 +452,18 @@ h2 {
     left: 5px;
     width: 30px;
     height: 30px;
+  }
+  .Background article {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+  }
+  .Background article {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
   }
 }
 /* @media (max-width: 250px) {
