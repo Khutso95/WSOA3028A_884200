@@ -38,9 +38,7 @@ var closing = document.querySelector(".CloseNav");
 function MobileNav() {
   if (drop.style.display == "grid") {
     drop.style.display = "none";
-    // closing.style.display = "none";
   } else {
     drop.style.display = "grid";
-    // closing.style.display = "grid";
   }
 }
