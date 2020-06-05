@@ -1,47 +1,84 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Metaphors</title>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="Shepherd Modisha" />
+  <title>Blog</title>
 
-    <link rel="stylesheet" href="Styles.css" />
-  </head>
+  <link rel="stylesheet" href="blogStyles.css" />
+</head>
 
-  <body style="background-color: white;">
-    <nav>
-      <h1 style="text-align: center;">
-        <a href="index.html">Shepherd Modisha</a>
-      </h1>
-    </nav>
+<body>
+  <div class="main-container">
+    <div class="HomeButton">
+      <nav>
+        <h1>
+          <a href="index.html">Shepherd Modisha</a>
+        </h1>
+      </nav>
+    </div>
 
-    <button id="back-button"><<</button>
-    <button id="forward-button">>></button>
-    <button id="back-to-top">Top</button>
+    <div class="back-button"><button>&#8678</button></div>
+    <div class="forward-button"><button>&#8680</button></div>
+    <!-- <div class="to-top"><button id="to-top">Top</button></div> -->
+    <button id="to-top">&#8679</button>
 
-    <nav>
-      <h1>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="Shepherd.html">Blog</a></li>
-          <li><a href="Projects.html">Projects</a></li>
-          <li><a href="Press.html">Press</a></li>
-          <li><a href="About.html">About</a></li>
-          <br />
-          <li><a href="Blog.html">Academic</a></li>
-        </ul>
-      </h1>
-    </nav>
-    <h3>How I stole a prototype from a heavily guarded Nightlight CEO</h3>
-    <article>
-      <p>
-        In the next few days will be putting up a few blogs in response to
-        <a href="Article1.html">this</a> misinformed and insulting article by a
-        once reputable newspaper, Witwatersrand Post.
-      </p>
-    </article>
+    <div class="Navigation">
+      <nav>
+        <h1>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Shepherd.html">Blog</a></li>
+            <li><a href="Projects.html">Projects</a></li>
+            <li><a href="Press.html">Press</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Blog.html">Academic</a></li>
+          </ul>
+        </h1>
+      </nav>
+    </div>
+    <div class="Background">
+      <!-- Dropdown Menu -->
+      <div class="MobileNavigation">
+        <nav>
+          <h1>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="Shepherd.html">Blog</a></li>
+              <li><a href="Projects.html">Projects</a></li>
+              <li><a href="Press.html">Press</a></li>
+              <li><a href="About.html">About</a></li>
+              <li><a href="Blog.html">Academic</a></li>
+            </ul>
+          </h1>
+        </nav>
+      </div>
+      <div class="BurgerNav">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+      </div>
+      <div class="CloseNav">
+        <h1>X</h1>
+      </div>
+      <h2>Recent Posts</h2>
 
-    <script src="Code.js"></script>
-  </body>
+      <nav>
+        <h3>
+          <ul>
+            <li><a href="German_Tech1.html">Shepherd’s Eye Built on Stolen German tech? (1 of 3)</a></li>
+            <li><a href="German_Tech2.html">Shepherd’s Eye Built on Stolen German tech? (2 of 3)</a></li>
+            <li><a href="German_Tech3.html">Shepherd’s Eye Built on Stolen German tech? (3 of 3)</a></li>
+            <li><a href="Message.html">Message from Shepherd</a></li>
+          </ul>
+        </h3>
+      </nav>
+    </div>
+  </div>
+
+  <script type="text/javascript" charset="utf-8" defer src="Code.js"></script>
+</body>
+
 </html>
