@@ -1,75 +1,107 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Academic</title>
+<html lang="en" dir="ltr">
 
-    <link rel="stylesheet" href="Styles.css" />
-  </head>
-  <body>
-    <nav>
-      <h1 style="text-align: center;">
-        <a href="index.html">Shepherd Modisha</a>
-      </h1>
-    </nav>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="Shepherd Modisha" />
+  <title>Academic</title>
 
-    <button id="back-button"><<</button>
-    <button id="forward-button">>></button>
-    <button id="back-to-top">Top</button>
-    <nav>
-      <h1>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="Shepherd.html">Blog</a></li>
-          <li><a href="Projects.html">Projects</a></li>
-          <li><a href="Press.html">Press</a></li>
-          <li><a href="About.html">About</a></li>
-          <br />
-          <li><a href="Blog.html">Academic</a></li>
-        </ul>
-      </h1>
-    </nav>
+  <link rel="stylesheet" href="blogStyles.css" />
+</head>
 
-    <h2>Recent Posts</h2>
+<body>
+  <div class="main-container">
+    <div class="HomeButton">
+      <nav>
+        <h1>
+          <a href="index.html">Shepherd Modisha</a>
+        </h1>
+      </nav>
+    </div>
 
-    <nav>
-      <h3>
-        <ul>
-          <li><a href="Who_is_Shepherd.html">Who is Shepherd</a></li>
-          <li>
-            <a href="Changing_Technology.html"
-              >Changing Technology and the Spread of Internet Culture</a
-            >
-          </li>
-          <li><a href="Web_Browser.html">What is a browser</a></li>
-          <li>
-            <a href="Accessibility.html">The importance of Accessibility</a>
-          </li>
-          <li>
-            <a href="Metaphors.html"
-              >Understanding Digital Information Using Metaphors</a
-            >
-          </li>
-          <li>
-            <a href="LawsOfUX1.html">Laws of UX: Tesla Motors (1 of 3)</a>
-          </li>
-          <li>
-            <a href="LawsOfUX2.html">Laws of UX: Tesla Motors (2 of 3)</a>
-          </li>
-          <li>
-            <a href="LawsOfUX3.html">Laws of UX: Tesla Motors (3 of 3)</a>
-          </li>
-          <li>
-            <a href="Charecter_Design.html">Character Design Rationale</a>
-          </li>
-          <li>
-            <a href="Design_Reflection.html">Design Reflection</a>
-          </li>
-        </ul>
-      </h3>
-    </nav>
+    <div class="back-button"><button>&#8678</button></div>
+    <div class="forward-button"><button>&#8680</button></div>
+    <!-- <div class="to-top"><button id="to-top">Top</button></div> -->
+    <button id="to-top">&#8679</button>
 
-    <script src="Code.js"></script>
-  </body>
+    <div class="Navigation">
+      <nav>
+        <h1>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Shepherd.html">Blog</a></li>
+            <li><a href="Projects.html">Projects</a></li>
+            <li><a href="Press.html">Press</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Blog.html">Academic</a></li>
+          </ul>
+        </h1>
+      </nav>
+    </div>
+    <div class="Background">
+      <!-- Dropdown Menu -->
+      <div class="MobileNavigation">
+        <nav>
+          <h1>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="Shepherd.html">Blog</a></li>
+              <li><a href="Projects.html">Projects</a></li>
+              <li><a href="Press.html">Press</a></li>
+              <li><a href="About.html">About</a></li>
+              <li><a href="Blog.html">Academic</a></li>
+            </ul>
+          </h1>
+        </nav>
+      </div>
+      <div class="BurgerNav">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+      </div>
+      <div class="CloseNav">
+        <h1>X</h1>
+      </div>
+            <h2>Recent Posts</h2>
+            
+            <nav>
+              <h3>
+                <ul>
+                  <li><a href="Who_is_Shepherd.html">Who is Shepherd</a></li>
+                  <li>
+                    <a href="Changing_Technology.html">Changing Technology and the Spread of Internet
+                      Culture</a>
+                  </li>
+                  <li><a href="Web_Browser.html">What is a browser</a></li>
+                  <li>
+                    <a href="Accessibility.html">The importance of Accessibility</a>
+                  </li>
+                  <li>
+                    <a href="Metaphors.html">Understanding Digital Information Using Metaphors</a>
+                  </li>
+                  <li>
+                    <a href="LawsOfUX1.html">Laws of UX: Tesla Motors (1 of 3)</a>
+                  </li>
+                  <li>
+                    <a href="LawsOfUX2.html">Laws of UX: Tesla Motors (2 of 3)</a>
+                  </li>
+                  <li>
+                    <a href="LawsOfUX3.html">Laws of UX: Tesla Motors (3 of 3)</a>
+                  </li>
+                  <li>
+                    <a href="Charecter_Design.html">Character Design Rationale</a>
+                  </li>
+                  <li>
+                    <a href="Design_Reflection.html">Design Reflection</a>
+                  </li>
+                </ul>
+              </h3>
+            </nav>
+    </div>
+  </div>
+
+  <script type="text/javascript" charset="utf-8" defer src="Code.js"></script>
+</body>
+
 </html>

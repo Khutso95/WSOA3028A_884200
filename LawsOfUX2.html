@@ -1,104 +1,138 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Laws of UX</title>
 
-    <link rel="stylesheet" href="Styles.css" />
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="Shepherd Modisha" />
+  <title>Laws of UX</title>
 
-  <body style="background-color: white;">
-    <nav>
-      <h1 style="text-align: center;">
-        <a href="index.html">Shepherd Modisha</a>
-      </h1>
-    </nav>
+  <link rel="stylesheet" href="blogStyles.css" />
+</head>
 
-    <button id="back-button"><<</button>
-    <button id="forward-button">>></button>
-    <button id="back-to-top">Top</button>
+<body>
+  <div class="main-container">
+    <div class="HomeButton">
+      <nav>
+        <h1>
+          <a href="index.html">Shepherd Modisha</a>
+        </h1>
+      </nav>
+    </div>
 
-    <nav>
-      <h1>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="Shepherd.html">Blog</a></li>
-          <li><a href="Projects.html">Projects</a></li>
-          <li><a href="Press.html">Press</a></li>
-          <li><a href="About.html">About</a></li>
-          <br />
-          <li><a href="Blog.html">Academic</a></li>
-        </ul>
-      </h1>
-    </nav>
-    <h3>Laws of UX: Tesla Motors (2 of 3)</h3>
-    <article>
-      <p>Author: Khutso Nkadimeng</p>
-      <p>22 Apr 2020</p>
-      <img src="images/tesla model s.jpg" width="40%" alt="Tesla Model S" />
+    <div class="back-button"><button>&#8678</button></div>
+    <div class="forward-button"><button>&#8680</button></div>
+    <!-- <div class="to-top"><button id="to-top">Top</button></div> -->
+    <button id="to-top">&#8679</button>
 
-      <p>
-        In this part two of the series, I continue to look at the Laws of User
-        Experience crated by Jon Yablonski. and how they apply to Tesla Inc.
-      </p>
-      <p>
-        <strong>Law of Pragnanz</strong>:People will perceive and interpret
-        ambiguous or complex images as the simplest form possible because it is
-        the interpretation that requires the least cognitive effort of us.
-      </p>
-      <p>
-        Some analysts and drivers just summarise Tesla as an iPhone on wheels.
-        This is largely due to the seamless integration between its hardware and
-        software as well its production line’s vertical integration. Just like
-        smartphones, Tesla cars have over-the-air updates, this is perhaps one
-        of the leading competitive advantages Tesla has over petrol cars. You
-        update your car overnight and the next day your acceleration is faster,
-        the breaks are better, the battery last longer, so to explain all these,
-        a phone was used as a metaphor.
-      </p>
-      <p>
-        An even more interesting case is that of investors and financial
-        analysts. From what perspective do you analyse Tesla? Is it a car
-        company? Is it a technology company? Is it a battery/energy company?
-        Most bears picked an auto company and looked at it like they would Ford
-        or BMW but one of the most bullish Tesla shareholder Cathie Woods
-        classifies Tesla as an autonomous taxi company, essentially, a major
-        threat to ride-sharing companies such as Uber and Lyft.
-      </p>
-      <p>
-        <strong>Tesler’s Law</strong>: Tesler's Law, also known as The Law of
-        Conservation of Complexity, states that for any system there is a
-        certain amount of complexity which cannot be reduced.
-      </p>
-      <p>
-        Tesla CEO Elon Musk wanted his factory to be as futuristic as his cars,
-        so he decided to automate everything he could to make his company's
-        first mass-production car, the Model 3. It turns out that certain tasks
-        which come intuitively to humans are extremely difficult for machines.
-        This miscalculation resulted in what is now known as Tesla's Production
-        Hell. Production of complicated machines will likely remain a
-        collaboration between humans and machines. But what does this have to
-        with drivers? Well, deliveries were delayed, and customers were not
-        happy at all.
-      </p>
-      <p>
-        <strong>Von Restorff Effect</strong>: The Von Restorff effect, also
-        known as The Isolation Effect, predicts that when multiple similar
-        objects are present, the one that differs from the rest is most likely
-        to be remembered.
-      </p>
-      <p>
-        Tesla is one of the most innovative companies in the world and with
-        everything they have put into the car, from what I gather: Nothing beats
-        the acceleration in Ludicrous mode.
-      </p>
+    <div class="Navigation">
+      <nav>
+        <h1>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Shepherd.html">Blog</a></li>
+            <li><a href="Projects.html">Projects</a></li>
+            <li><a href="Press.html">Press</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Blog.html">Academic</a></li>
+          </ul>
+        </h1>
+      </nav>
+    </div>
+    <div class="Background">
+      <!-- Dropdown Menu -->
+      <div class="MobileNavigation">
+        <nav>
+          <h1>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="Shepherd.html">Blog</a></li>
+              <li><a href="Projects.html">Projects</a></li>
+              <li><a href="Press.html">Press</a></li>
+              <li><a href="About.html">About</a></li>
+              <li><a href="Blog.html">Academic</a></li>
+            </ul>
+          </h1>
+        </nav>
+      </div>
+      <div class="BurgerNav">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+      </div>
+      <div class="CloseNav">
+        <h1>X</h1>
+      </div>
+            <h3>Laws of UX: Tesla Motors (2 of 3)</h3>
+            <article>
+              <p>Author: Khutso Nkadimeng</p>
+              <p>22 Apr 2020</p>
+              <img src="images/tesla model s.jpg" width="40%" alt="Tesla Model S" />
+            
+              <p>
+                In this part two of the series, I continue to look at the Laws of User
+                Experience crated by Jon Yablonski. and how they apply to Tesla Inc.
+              </p>
+              <p>
+                <strong>Law of Pragnanz</strong>:People will perceive and interpret
+                ambiguous or complex images as the simplest form possible because it is
+                the interpretation that requires the least cognitive effort of us.
+              </p>
+              <p>
+                Some analysts and drivers just summarise Tesla as an iPhone on wheels.
+                This is largely due to the seamless integration between its hardware and
+                software as well its production line’s vertical integration. Just like
+                smartphones, Tesla cars have over-the-air updates, this is perhaps one
+                of the leading competitive advantages Tesla has over petrol cars. You
+                update your car overnight and the next day your acceleration is faster,
+                the breaks are better, the battery last longer, so to explain all these,
+                a phone was used as a metaphor.
+              </p>
+              <p>
+                An even more interesting case is that of investors and financial
+                analysts. From what perspective do you analyse Tesla? Is it a car
+                company? Is it a technology company? Is it a battery/energy company?
+                Most bears picked an auto company and looked at it like they would Ford
+                or BMW but one of the most bullish Tesla shareholder Cathie Woods
+                classifies Tesla as an autonomous taxi company, essentially, a major
+                threat to ride-sharing companies such as Uber and Lyft.
+              </p>
+              <p>
+                <strong>Tesler’s Law</strong>: Tesler's Law, also known as The Law of
+                Conservation of Complexity, states that for any system there is a
+                certain amount of complexity which cannot be reduced.
+              </p>
+              <p>
+                Tesla CEO Elon Musk wanted his factory to be as futuristic as his cars,
+                so he decided to automate everything he could to make his company's
+                first mass-production car, the Model 3. It turns out that certain tasks
+                which come intuitively to humans are extremely difficult for machines.
+                This miscalculation resulted in what is now known as Tesla's Production
+                Hell. Production of complicated machines will likely remain a
+                collaboration between humans and machines. But what does this have to
+                with drivers? Well, deliveries were delayed, and customers were not
+                happy at all.
+              </p>
+              <p>
+                <strong>Von Restorff Effect</strong>: The Von Restorff effect, also
+                known as The Isolation Effect, predicts that when multiple similar
+                objects are present, the one that differs from the rest is most likely
+                to be remembered.
+              </p>
+              <p>
+                Tesla is one of the most innovative companies in the world and with
+                everything they have put into the car, from what I gather: Nothing beats
+                the acceleration in Ludicrous mode.
+              </p>
+            
+              <p>References</p>
+            
+              <p>1. <a href=" https://lawsofux.com/" target="_blank">Laws Of UX</a></p>
+            </article>
+    </div>
+  </div>
 
-      <p>References</p>
+  <script type="text/javascript" charset="utf-8" defer src="Code.js"></script>
+</body>
 
-      <p>1. <a href=" https://lawsofux.com/" target="_blank">Laws Of UX</a></p>
-    </article>
-
-    <script src="Code.js"></script>
-  </body>
 </html>

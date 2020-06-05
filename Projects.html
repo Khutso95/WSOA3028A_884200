@@ -1,77 +1,112 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project</title>
 
-    <link rel="stylesheet" href="Styles.css" />
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="Shepherd Modisha" />
+  <title>projects</title>
 
-  <body style="background-color: white;">
-    <nav>
-      <h1 style="text-align: center;">
-        <a href="index.html">Shepherd Modisha</a>
-      </h1>
-    </nav>
+  <link rel="stylesheet" href="blogStyles.css" />
+</head>
 
-    <button id="back-button"><<</button>
-    <button id="forward-button">>></button>
-    <button id="back-to-top">Top</button>
-    <nav>
-      <h1>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="Shepherd.html">Blog</a></li>
-          <li><a href="Projects.html">Projects</a></li>
-          <li><a href="Press.html">Press</a></li>
-          <li><a href="About.html">About</a></li>
-          <br />
-          <li><a href="Blog.html">Academic</a></li>
-        </ul>
-      </h1>
-    </nav>
-    <h3>Project Noord</h3>
-    <article>
-      <p>Author: Shepherd Modisha</p>
-      <p>22 Apr 2020</p>
-      <img src="images/Joburg Rank.png" alt="Common application icons" />
+<body>
+  <div class="main-container">
+    <div class="HomeButton">
+      <nav>
+        <h1>
+          <a href="index.html">Shepherd Modisha</a>
+        </h1>
+      </nav>
+    </div>
 
-      <p>
-        Inconvenience, insults and insecurity, that’s what commuters pay for to
-        get off after robot in a taxi. If reckless driving was an Olympic sport,
-        there would gold medals hanging on a rear-view mirror of every taxi in
-        South Africa. Taking a taxi might sound like a very normal thing in any
-        society, but this is a deadly undertaking in the city of Johannesburg, a
-        problem I intend to eliminate.
-      </p>
-      <p>
-        Project Noord is an ambitious project by my company Shepherd’s Eye. We
-        have been working on it for over 5 years and personally have been
-        working on it for over 15 years. The aim of the project is to make an
-        autonomous minibus taxi and create a true freedom of movement. We
-        currently have sensors and specialised computers in 3000 taxis commuting
-        from Noord Taxi Rank in Johannesburg to every part of the country.
-      </p>
-      <p>
-        We are inspired by the human eye and the only sensor close enough is a
-        camera, which is why cameras are the major sensors in our system. Using
-        cameras and artificial intelligence, we can see objects and distinguish
-        them in a way that lidar would not, lidar also required us to build a 3D
-        map of our roads. This would mean less processing power, but it would
-        also mean our cars would be confused if a road was reconstructed or
-        worse, its full of plastics. We use radar for long distance calculations
-        and most advance night vision technology there is.
-      </p>
-      <p>
-        Our taxis have navigation difficulties under bad weather conditions,
-        since South Africa does not have a lot of snow, we have been putting
-        more effort into rainy days and progress has been made. I am very
-        excited about this project, it’s a revolution waiting to happen, and I
-        will be releasing technical specifications in the next coming weeks.
-      </p>
-    </article>
+    <div class="back-button"><button>&#8678</button></div>
+    <div class="forward-button"><button>&#8680</button></div>
+    <!-- <div class="to-top"><button id="to-top">Top</button></div> -->
+    <button id="to-top">&#8679</button>
 
-    <script src="Code.js"></script>
-  </body>
+    <div class="Navigation">
+      <nav>
+        <h1>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Shepherd.html">Blog</a></li>
+            <li><a href="Projects.html">Projects</a></li>
+            <li><a href="Press.html">Press</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Blog.html">Academic</a></li>
+          </ul>
+        </h1>
+      </nav>
+    </div>
+    <div class="Background">
+      <!-- Dropdown Menu -->
+      <div class="MobileNavigation">
+        <nav>
+          <h1>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="Shepherd.html">Blog</a></li>
+              <li><a href="Projects.html">Projects</a></li>
+              <li><a href="Press.html">Press</a></li>
+              <li><a href="About.html">About</a></li>
+              <li><a href="Blog.html">Academic</a></li>
+            </ul>
+          </h1>
+        </nav>
+      </div>
+      <div class="BurgerNav">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+      </div>
+      <div class="CloseNav">
+        <h1>X</h1>
+      </div>
+            <h3>Project Noord</h3>
+            <article>
+              <p>Author: Shepherd Modisha</p>
+              <p>22 Apr 2020</p>
+              <img src="images/Joburg Rank.png" alt="Common application icons" />
+            
+              <p>
+                Inconvenience, insults and insecurity, that’s what commuters pay for to
+                get off after robot in a taxi. If reckless driving was an Olympic sport,
+                there would gold medals hanging on a rear-view mirror of every taxi in
+                South Africa. Taking a taxi might sound like a very normal thing in any
+                society, but this is a deadly undertaking in the city of Johannesburg, a
+                problem I intend to eliminate.
+              </p>
+              <p>
+                Project Noord is an ambitious project by my company Shepherd’s Eye. We
+                have been working on it for over 5 years and personally have been
+                working on it for over 15 years. The aim of the project is to make an
+                autonomous minibus taxi and create a true freedom of movement. We
+                currently have sensors and specialised computers in 3000 taxis commuting
+                from Noord Taxi Rank in Johannesburg to every part of the country.
+              </p>
+              <p>
+                We are inspired by the human eye and the only sensor close enough is a
+                camera, which is why cameras are the major sensors in our system. Using
+                cameras and artificial intelligence, we can see objects and distinguish
+                them in a way that lidar would not, lidar also required us to build a 3D
+                map of our roads. This would mean less processing power, but it would
+                also mean our cars would be confused if a road was reconstructed or
+                worse, its full of plastics. We use radar for long distance calculations
+                and most advance night vision technology there is.
+              </p>
+              <p>
+                Our taxis have navigation difficulties under bad weather conditions,
+                since South Africa does not have a lot of snow, we have been putting
+                more effort into rainy days and progress has been made. I am very
+                excited about this project, it’s a revolution waiting to happen, and I
+                will be releasing technical specifications in the next coming weeks.
+              </p>
+            </article>
+    </div>
+  </div>
+
+  <script type="text/javascript" charset="utf-8" defer src="Code.js"></script>
+</body>
+
 </html>

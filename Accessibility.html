@@ -1,97 +1,138 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Accessibility</title>
+<html lang="en" dir="ltr">
 
-    <link rel="stylesheet" href="Styles.css" />
-  </head>
-  <body>
-    <nav>
-      <h1 style="text-align: center;">
-        <a href="index.html">Shepherd Modisha</a>
-      </h1>
-    </nav>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="Shepherd Modisha" />
+  <title>Accessibility</title>
 
-    <button id="back-button"><<</button>
-    <button id="forward-button">>></button>
-    <button id="back-to-top">Top</button>
+  <link rel="stylesheet" href="blogStyles.css" />
+</head>
 
-    <nav>
-      <h1>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="Shepherd.html">Blog</a></li>
-          <li><a href="Projects.html">Projects</a></li>
-          <li><a href="Press.html">Press</a></li>
-          <li><a href="About.html">About</a></li>
-          <br />
-          <li><a href="Blog.html">Academic</a></li>
-        </ul>
-      </h1>
-    </nav>
-    <h3>The importance of Accessibility</h3>
-    <article>
-      <p>Author: Khutso Nkadimeng</p>
-      <p>28 Feb 2020</p>
-      <img
-        src="images/doorlock.jpeg"
-        alt="an image of a door with keys to represent accessibility"
-      />
+<body>
+  <div class="main-container">
+    <div class="HomeButton">
+      <nav>
+        <h1>
+          <a href="index.html">Shepherd Modisha</a>
+        </h1>
+      </nav>
+    </div>
 
-      <p>
-        The day before writing this blog an eye opening coincident happened to
-        me. I took out my phone and it was displaying everything in black and
-        white. After restarting it, nothing changed, and I got frustrated trying
-        to fix it. As a true member of my generation I did the right thing,
-        searched for answers on the internet. It turns out its an operation mode
-        designed for people with colour-blindness. Something I considered
-        frustrating is a life saver for someone else and on the same day our
-        lecturer said a lot of things about accessibility but what stood out for
-        me was this: “Your design decisions are political statements” and
-        suddenly my perspective changed.
-      </p>
+    <div class="back-button"><button>&#8678</button></div>
+    <div class="forward-button"><button>&#8680</button></div>
+    <!-- <div class="to-top"><button id="to-top">Top</button></div> -->
+    <button id="to-top">&#8679</button>
 
-      <p>
-        The internet is a revolutionary tool in every segment of our society and
-        maybe more so for students, academics, researchers, activists and
-        politicians. Given the importance of the World Wide Web in the modern
-        world, it is important that we remove access barriers for all members of
-        our society including people with disabilities. Access to the internet
-        is becoming a basic human right, just like access to electricity or
-        clean water and some progressive government around the world are
-        declaring it a crime to design websites without necessary accessibility
-        tools.
-      </p>
+    <div class="Navigation">
+      <nav>
+        <h1>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Shepherd.html">Blog</a></li>
+            <li><a href="Projects.html">Projects</a></li>
+            <li><a href="Press.html">Press</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Blog.html">Academic</a></li>
+          </ul>
+        </h1>
+      </nav>
+    </div>
+    <div class="Background">
+      <!-- Dropdown Menu -->
+      <div class="MobileNavigation">
+        <nav>
+          <h1>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="Shepherd.html">Blog</a></li>
+              <li><a href="Projects.html">Projects</a></li>
+              <li><a href="Press.html">Press</a></li>
+              <li><a href="About.html">About</a></li>
+              <li><a href="Blog.html">Academic</a></li>
+            </ul>
+          </h1>
+        </nav>
+      </div>
+      <div class="BurgerNav">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+      </div>
+      <div class="CloseNav">
+        <h1>X</h1>
+      </div>
+            <h3>The importance of Accessibility</h3>
+            <article>
 
-      <p>
-        Currently in South Africa there’s debate between telecommunications
-        regulatory body, the Independent Communications Authority of South
-        Africa (ICASA), telecommunications companies, the public and the
-        government. The debate is about high costs of data bundles, the movement
-        DataMustFall was born out of this. ICASA says phone companies must
-        reduces prices, phone companies say the government must release more
-        spectrum and the government say phone companies are simply greedy. In
-        the meantime, the rest of us struggle to access the internet once we
-        leave free Wi-Fi at universities. So, access is not simply a problem of
-        web developers and robust design, it’s about infrastructure and
-        socio-economic status.
-      </p>
+              <img src="images/doorlock.jpeg" alt="an image of a door with keys to represent accessibility" />
+              <p>Author: Khutso Nkadimeng</p>
+              <p>28 Feb 2020</p>
+              <p>
+                The day before writing this blog an eye opening coincident happened to
+                me. I took out my phone and it was displaying everything in black and
+                white. After restarting it, nothing changed, and I got frustrated trying
+                to fix it. As a true member of my generation I did the right thing,
+                searched for answers on the internet. It turns out its an operation mode
+                designed for people with colour-blindness. Something I considered
+                frustrating is a life saver for someone else and on the same day our
+                lecturer said a lot of things about accessibility but what stood out for
+                me was this: “Your design decisions are political statements” and
+                suddenly my perspective changed.
+              </p>
+            
+              <p>
+                The internet is a revolutionary tool in every segment of our society and
+                maybe more so for students, academics, researchers, activists and
+                politicians. Given the importance of the World Wide Web in the modern
+                world, it is important that we remove access barriers for all members of
+                our society including people with disabilities. Access to the internet
+                is becoming a basic human right, just like access to electricity or
+                clean water and some progressive government around the world are
+                declaring it a crime to design websites without necessary accessibility
+                tools.
+              </p>
+            
+              <p>
+                Currently in South Africa there’s debate between telecommunications
+                regulatory body, the Independent Communications Authority of South
+                Africa (ICASA), telecommunications companies, the public and the
+                government. The debate is about high costs of data bundles, the movement
+                DataMustFall was born out of this. ICASA says phone companies must
+                reduces prices, phone companies say the government must release more
+                spectrum and the government say phone companies are simply greedy. In
+                the meantime, the rest of us struggle to access the internet once we
+                leave free Wi-Fi at universities. So, access is not simply a problem of
+                web developers and robust design, it’s about infrastructure and
+                socio-economic status.
+              </p>
+            
+              <p>
+                I will conclude by pleading with developers to follow the ethical
+                guidelines provided by W3C in the Web Content Accessibility Guidelines
+                2.0. The four principles of WCAG 2.0 are:
+              </p>
+            
+              <ul>
+                <li>
+                  <p>Perceivable</p>
+                </li>
+                <li>
+                  <p>Operable</p>
+                </li>
+                <li>
+                  <p>Understandable</p>
+                </li>
+                <li>
+                  <p>Robust</p>
+                </li>
+              </ul>
+            </article>
+    </div>
+  </div>
 
-      <p>
-        I will conclude by pleading with developers to follow the ethical
-        guidelines provided by W3C in the Web Content Accessibility Guidelines
-        2.0. The four principles of WCAG 2.0 are:
-      </p>
+  <script type="text/javascript" charset="utf-8" defer src="Code.js"></script>
+</body>
 
-      <ul>
-        <li><p>Perceivable</p></li>
-        <li><p>Operable</p></li>
-        <li><p>Understandable</p></li>
-        <li><p>Robust</p></li>
-      </ul>
-    </article>
-    <script src="Code.js"></script>
-  </body>
 </html>
