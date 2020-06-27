@@ -1,4 +1,4 @@
-var backToTopButton = document.querySelector("#to-top");
+var backToTopButton = document.getElementById("to-top");
 var backButton = document.querySelector(".back-button");
 var forwardButton = document.querySelector(".forward-button");
 
@@ -12,7 +12,9 @@ function ScrollController() {
     backToTopButton.style.display = "none";
   }
 }
-backToTopButton.addEventListener("click", BackToTopFuction);
+backToTopButton.addEventListener("click", function () {
+  window.scrollTo(0, 0);
+});
 
 function BackToTopFuction() {
   setTimeout(function () {
