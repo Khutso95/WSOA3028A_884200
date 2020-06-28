@@ -1,4 +1,4 @@
-var backToTopButton = document.getElementById("to-top");
+var backToTopButton = document.querySelector(".to-top");
 var backButton = document.querySelector(".back-button");
 var forwardButton = document.querySelector(".forward-button");
 

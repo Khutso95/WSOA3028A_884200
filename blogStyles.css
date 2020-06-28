@@ -2,9 +2,10 @@
   margin: 0;
   padding: 0;
 }
-#to-top {
+.to-top {
   display: none;
-  position: absolute;
+  position: fixed;
+  z-index: 1;
   bottom: 60px;
   left: 1400px;
   width: 50px;
@@ -20,14 +21,15 @@
   transition-timing-function: ease-in-out;
   transition-property: background-color, color;
 }
-#to-top:hover,
-#to-top:focus {
+.to-top:hover,
+.to-top:focus {
   background-color: white;
   color: black;
 }
 
 .back-button button {
   position: fixed;
+  z-index: 1;
   top: 5px;
   left: 70px;
   width: 50px;
@@ -50,6 +52,7 @@
 }
 .forward-button button {
   position: fixed;
+  z-index: 1;
   top: 5px;
   left: 130px;
   width: 50px;
@@ -168,6 +171,7 @@ body {
 .buttons {
   grid-area: buttons;
 }
+
 p,
 h1,
 h2,
