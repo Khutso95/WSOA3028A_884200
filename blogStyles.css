@@ -4,7 +4,7 @@
 }
 #to-top {
   display: none;
-  position: relative;
+  position: absolute;
   bottom: 60px;
   left: 1400px;
   width: 50px;
