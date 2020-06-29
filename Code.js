@@ -91,3 +91,13 @@ function Compute() {
     });
   });
 }
+
+function LoadingIndividualTestImages() {
+  const names = [
+    "Angela Bassett",
+    "Danai Gurira",
+    "Letitia Wright",
+    "Lupita Nyong'o",
+  ];
+  return Promise.all(names.map(async (label) => {}));
+}
