@@ -53,10 +53,14 @@ Promise.all([
   faceapi.nets.ssdMobilenetv1.loadFromUri("/models"),
 ]).then(Compute);
 
-function Compute() {
+async function Compute() {
   const FaceContainer = document.createElement("div");
   FaceContainer.style.position = "relative";
   ImageSection.append(FaceContainer);
+
+  const LabeledFaces = await LoadingIndividualTestImages();
+  console.log(LabeledFaces);
+
   ImageSection.append("Loaded");
 
   let image;
@@ -99,5 +103,19 @@ function LoadingIndividualTestImages() {
     "Letitia Wright",
     "Lupita Nyong'o",
   ];
-  return Promise.all(names.map(async (label) => {}));
+  return Promise.all(
+    names.map(async (label) => {
+      const Faces = [];
+      for (let i = 1; i <= 3; i++) {
+        const pics = faceapi.fetchImage(
+          "Access-Control-Allow-Origin:https://github.com/Khutso95/WSOA3028A_884200/tree/master/test_individial_images/${label}/${i}.jpg"
+        );
+        const detectedFaces = await faceapi
+          .detectSingleFace(pics)
+          .withFaceLandmarks()
+          .withFaceDescriptors();
+      }
+      return new faceapi.LabeledFaceDescriptors(label, Faces);
+    })
+  );
 }
