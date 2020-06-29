@@ -83,6 +83,7 @@ body {
   font-size: 20px;
   background-color: black;
 }
+
 .Navigation {
   display: none;
   grid-area: navigation;
@@ -144,6 +145,14 @@ body {
   grid-template-areas:
     "home    home"
     "main main";
+}
+canvas {
+  position: absolute;
+  top: 70px;
+  left: 0;
+}
+.ImageSection {
+  color: white;
 }
 .HomeButton {
   grid-area: home;

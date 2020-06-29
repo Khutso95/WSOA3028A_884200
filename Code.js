@@ -44,3 +44,50 @@ function MobileNav() {
     drop.style.display = "grid";
   }
 }
+//Face Recognition
+var UploadedImage = document.querySelector(".UploadedImage");
+const ImageSection = document.querySelector(".ImageSection");
+Promise.all([
+  faceapi.nets.faceRecognitionNet.loadFromUri("/models"),
+  faceapi.nets.faceLandmark68Net.loadFromUri("/models"),
+  faceapi.nets.ssdMobilenetv1.loadFromUri("/models"),
+]).then(Compute);
+
+function Compute() {
+  const FaceContainer = document.createElement("div");
+  FaceContainer.style.position = "relative";
+  ImageSection.append(FaceContainer);
+  ImageSection.append("Loaded");
+
+  let image;
+  let FaceSquares;
+
+  UploadedImage.addEventListener("change", async () => {
+    if (image) {
+      image.remove();
+    }
+    if (FaceSquares) {
+      FaceSquares.remove();
+    }
+    image = await faceapi.bufferToImage(UploadedImage.files[0]);
+    FaceSquares = faceapi.createCanvasFromMedia(image);
+    ImageSection.append(image);
+    ImageSection.append(FaceSquares);
+    const theSizes = { width: image.width, height: image.height };
+    faceapi.matchDimensions(FaceSquares, theSizes);
+
+    const detected = await faceapi
+      .detectAllFaces(image)
+      .withFaceLandmarks()
+      .withFaceDescriptors();
+
+    const resizedSquares = faceapi.resizeResults(detected, theSizes);
+    resizedSquares.forEach((detected) => {
+      const square = detected.detection.box;
+      const drawSquares = new faceapi.draw.DrawBox(square, {
+        label: "Face",
+      });
+      drawSquares.draw(FaceSquares);
+    });
+  });
+}
