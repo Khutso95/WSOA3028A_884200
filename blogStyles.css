@@ -150,6 +150,7 @@ canvas {
   position: absolute;
   top: 70px;
   left: 0;
+  color: white;
 }
 .ImageSection {
   color: white;

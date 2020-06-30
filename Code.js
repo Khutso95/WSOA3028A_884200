@@ -45,109 +45,16 @@ function MobileNav() {
   }
 }
 //Face Recognition
-// var UploadedImage = document.querySelector(".UploadedImage");
-// const ImageSection = document.querySelector(".ImageSection");
-// Promise.all([
-//   faceapi.nets.faceRecognitionNet.loadFromUri("/models"),
-//   faceapi.nets.faceLandmark68Net.loadFromUri("/models"),
-//   faceapi.nets.ssdMobilenetv1.loadFromUri("/models"),
-// ]).then(Compute);
-
-// async function Compute() {
-//   const FaceContainer = document.createElement("div");
-//   FaceContainer.style.position = "relative";
-//   ImageSection.append(FaceContainer);
-
-//   const LabeledFaces = await LoadingIndividualTestImages();
-//   // console.log(LabeledFaces);
-//   const MatchedFaces = new faceapi.FaceMatcher(LabeledFaces, 0.65);
-//   ImageSection.append("Loaded");
-
-//   let image;
-//   let FaceSquares;
-
-//   UploadedImage.addEventListener("change", async () => {
-//     if (image) {
-//       image.remove();
-//     }
-//     if (FaceSquares) {
-//       FaceSquares.remove();
-//     }
-//     image = await faceapi.bufferToImage(UploadedImage.files[0]);
-//     FaceSquares = faceapi.createCanvasFromMedia(image);
-//     ImageSection.append(image);
-//     ImageSection.append(FaceSquares);
-//     const theSizes = { width: image.width, height: image.height };
-//     faceapi.matchDimensions(FaceSquares, theSizes);
-
-//     const detected = await faceapi
-//       .detectAllFaces(image)
-//       .withFaceLandmarks()
-//       .withFaceDescriptors();
-
-//     const resizedSquares = faceapi.resizeResults(detected, theSizes);
-
-//     const results = resizedSquares.map((d) =>
-//       FaceMatcher.findBestMatch(d.descriptor)
-//     );
-
-//     results.forEach((result, i) => {
-//       const square = resizedSquares[i].detection.box;
-//       const drawSquares = new faceapi.draw.DrawBox(square, {
-//         label: result.toString(),
-//       });
-//       drawSquares.draw(FaceSquares);
-//     });
-//   });
-// }
-
-// // var xmlhttp = new XMLHttpRequest();
-// // var url =
-// //   "https://github.com/Khutso95/WSOA3028A_884200/tree/master/test_individial_images";
-// // xmlhttp.open("GET", url, false);
-// // xmlhttp.setRequestHeader("Access-Control-Allow-Origin:", "*");
-// // xmlhttp.send();
-// faceapi.env.monkeyPatch({
-//   fetch: fetch,
-//   Canvas: window.HTMLCanvasElement,
-//   Image: window.HTMLImageElement,
-//   ImageData: canvas.ImageData,
-//   createCanvasElement: () => document.createElement("canvas"),
-//   createImageElement: () => document.createElement("img"),
-// });
-// function LoadingIndividualTestImages() {
-//   const names = [
-//     "Angela Bassett",
-//     "Danai Gurira",
-//     "Letitia Wright",
-//     "Lupita Nyong'o",
-//   ];
-//   return Promise.all(
-//     names.map(async (label) => {
-//       const Faces = [];
-//       for (let i = 1; i <= 3; i++) {
-//         const pics = faceapi.fetchImage(
-//           `https://cors-anywhere.herokuapp.com/https://github.com/Khutso95/WSOA3028A_884200/tree/master/test_individial_images/${label}/${i}.jpg`
-//         );
-//         const detectedFaces = await faceapi
-//           .detectSingleFace(pics)
-//           .withFaceLandmarks()
-//           .withFaceDescriptor();
-//         Faces.push(detectedFaces.descriptor);
-//       }
-//       return new faceapi.LabeledFaceDescriptors(label, Faces);
-//     })
-//   );
-// }
-// const ImageSection = document.querySelector(".ImageSection");
 
 const myfeed = document.getElementById("myfeed");
+let Ages = [];
 // myfeed.append(ImageSection);
 Promise.all([
   faceapi.nets.tinyFaceDetector.loadFromUri("/models"),
   faceapi.nets.faceLandmark68Net.loadFromUri("/models"),
   faceapi.nets.faceRecognitionNet.loadFromUri("/models"),
   faceapi.nets.faceExpressionNet.loadFromUri("/models"),
+  faceapi.nets.ageGenderNet.loadFromUri("/models"),
 ]).then(startLiveFeed);
 
 function startLiveFeed() {
@@ -169,7 +76,8 @@ myfeed.addEventListener(
       const FaceDetections = await faceapi
         .detectAllFaces(myfeed, new faceapi.TinyFaceDetectorOptions())
         .withFaceLandmarks()
-        .withFaceExpressions();
+        .withFaceExpressions()
+        .withAgeAndGender();
       const resizeBoxes = faceapi.resizeResults(FaceDetections, displaySize);
       drawCanvas
         .getContext("2d")
@@ -177,7 +85,25 @@ myfeed.addEventListener(
 
       faceapi.draw.drawDetections(drawCanvas, resizeBoxes);
       faceapi.draw.drawFaceExpressions(drawCanvas, resizeBoxes);
+
+      console.log(resizeBoxes);
+      const age = resizeBoxes[0].age;
+      const averagedAge = interpolatedAgePredictions(age);
+
+      const bottomRight = {
+        x: resizeBoxes[0].detection.box.bottomRight.x,
+        y: resizeBoxes[0].detection.box.bottomRight.y,
+      };
+      new faceapi.draw.DrawTextField(
+        [`${faceapi.utils.round(averagedAge, 0)} years`],
+        bottomRight
+      ).draw(drawCanvas);
     });
   },
   100
 );
+function interpolatedAgePredictions(age) {
+  Ages = [age].concat(Ages).slice(0, 30);
+  const avgAge = Ages.reduce((total, x) => total + x) / Ages.length;
+  return avgAge;
+}
