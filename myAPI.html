@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Shepherd Modisha" />
+    <title>Face Recognition Using face-api.js</title>
+
+    <link rel="stylesheet" href="blogStyles.css" />
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="HomeButton">
+            <nav>
+                <h1>
+                    <a href="index.html">Shepherd Modisha</a>
+                </h1>
+            </nav>
+        </div>
+
+        <div class="back-button"><button>&#8678</button></div>
+        <div class="forward-button"><button>&#8680</button></div>
+        <div><button class="to-top">&#8679</button></div>
+
+        <div class="Navigation">
+            <nav>
+                <h1>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="Shepherd.html">Blog</a></li>
+                        <li><a href="Projects.html">Projects</a></li>
+                        <li><a href="Press.html">Press</a></li>
+                        <li><a href="About.html">About</a></li>
+                        <li><a href="Blog.html">Academic</a></li>
+                    </ul>
+                </h1>
+            </nav>
+        </div>
+        <div class="Background">
+            <!-- Dropdown Menu -->
+            <div class="MobileNavigation">
+                <nav>
+                    <h1>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="Shepherd.html">Blog</a></li>
+                            <li><a href="Projects.html">Projects</a></li>
+                            <li><a href="Press.html">Press</a></li>
+                            <li><a href="About.html">About</a></li>
+                            <li><a href="Blog.html">Academic</a></li>
+                        </ul>
+                    </h1>
+                </nav>
+            </div>
+            <div class="BurgerNav">
+                <div class="one"></div>
+                <div class="two"></div>
+                <div class="three"></div>
+            </div>
+            <div class="CloseNav">
+                <h1>X</h1>
+            </div>
+            <h3>Face Recognition Using face-api.js</h3>
+            <article>
+                <img src="images/faceRecognition.png" alt="Face Recognition" />
+                <p>Author: Khutso Nkadimeng</p>
+                <p>30 Jun 2020</p>
+
+                <h4>Why this API?</h4>
+                <p>I have written a few articles about the ethical concerns surrounding computer vision. I wanted to explore this idea
+                further, hence my API choice face-api.js, <a href="https://itnext.io/face-api-js-javascript-api-for-face-recognition-in-the-browser-with-tensorflow-js-bcc2a6c4cf07" target="blank">“a javascript module, built on top of tensorflow.js core, which implements
+                several CNNs (Convolutional Neural Networks) to solve face detection, face recognition and face landmark detection,
+                optimized for the web and for mobile devices.”</a></p>
+
+                <p>One study I read <a href="CV_Ethical_Concerns.html" target="blank">found a 34.7% error rate in classifying dark-skinned females and 0.8% error rate in classifying
+                light-skinned males</a>, this fact also supported by the findings of the <a href="CV_Ethical_Concerns2.html" target="blank">National Institute of Standards and Technology in
+                the United States</a> which came to similar conclusions after testing 189 face recognition algorithms formed the basis of
+                my initial plans with this API. I devised the most unscientific scientific study in this subject, I wanted to put
+                together twenty-five pictures of black females and the same number of white male and then run this algorithm to see if
+                there was going to be discrepancies. There are obviously many academic alarms going off when reading this, however, it
+                was a good start. Flawed as it may sound, the tests would have been equally flawed in both test cases, therefore my
+                hypothesis would stand. However, this approach failed once I realised how much time it was taking, so I simplified my
+                work to a simple live stream that detects facial expressions and predicts the age of the subject.</p>
+                
+                <h4>Impact on my site</h4>
+                <br>
+                <p>This API’s impact on my site has largely been negative:</p>
+                <br>
+                <p>1. I failed to use it in a way that would be the most coherent for my site. This is largely because my initial plans for
+                it were not successful. Consequently, its feature on my site that is useful for research and learning purposes which are
+                two very important parts of this course, but it does not improve the user’s experience, it does the opposite.</p>
+                <br>
+                <p>2. It is the most unstable and untested part of my website; it is not properly optimised for mobile use when it comes to
+                screen size even though it works.</p>
+                <br>
+                <p>3. It feels like a separate project to mine at the same time it fits perfectly to my website. It depends entirely on
+                perspective. I believe I</p>
+                <br>
+                <p>4. The best part about this is the part that cannot be marked, I learned something new.</p>
+
+                <h4>Why was it necessary for my site?</h4>
+                <p>The theme and direction of my website are well cultivated with direct links between my posts and my character. <a href="Biography.html" target="blank">My
+                character</a> is an entrepreneur building self-driving car capabilities and computer vision technology with personal links
+                to the military. He has expressed <a href="EthicalConcerns.html" target="blank">concerns</a> over the recent developments in the face recognition sector involving <a href="https://www.marketwatch.com/story/microsoft-will-stop-selling-facial-recognition-software-to-police-2020-06-11" target="blank">IBM,
+                Microsoft, and Amazon.</a> Although my initial idea was to focus more on the automation of jobs, I ended up in this
+                controversial section of our tech world. The only other API that would be better suited for this scenario would YOLO or
+                similar computer vision products, otherwise, this was the best choice given the reasons.</p>
+                <h4>Alternatives</h4>
+                <p>The core of this API is tensorflow.js and it was the one alternative I considered before choosing this one. The major
+                reason why I did not use tensorflow is that I either had to have in-depth knowledge or use a second API which was
+                prohibited in this assignment. But why tensorflow or face-api? This is simply because they were built for the browser
+                and use JavaScript</p>
+                <h4>Conclusion</h4>
+                <p>It has been a privilege.</p>
+
+            </article>
+        </div>
+    </div>
+
+    <script type="text/javascript" charset="utf-8" defer src="Code.js"></script>
+</body>
+
+</html>
