@@ -139,7 +139,7 @@ function MobileNav() {
 //     })
 //   );
 // }
-const ImageSection = document.querySelector(".ImageSection");
+// const ImageSection = document.querySelector(".ImageSection");
 
 const myfeed = document.getElementById("myfeed");
 // myfeed.append(ImageSection);
